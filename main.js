@@ -111,8 +111,8 @@ while (contador > 0) {
 var continuar = "S";
 while (continuar.toLocaleLowerCase() === "s") {
   const operación = prompt("Selecciona el tipo de operación (-, +, *, /)");
-  const num1 = prompt("Ingresa el primer número.");
   const num2 = prompt("Ingresa el segundo número.");
+  const num1 = prompt("Ingresa el primer número.");
   var resultado;
   switch (operación) {
     case "-":
