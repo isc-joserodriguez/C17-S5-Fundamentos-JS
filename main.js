@@ -60,16 +60,77 @@ if (dineroEnTarjeta > 0) {
 
 function saluda(nombre, edad, ciudad) {
   console.log(
-    "Hola " + nombre + " tu edad es de " +
-    edad + " y vives en: " + ciudad
+    "Hola " + nombre + " tu edad es de " + edad + " y vives en: " + ciudad
   );
 }
 
 saluda("Roberto", 24, "Ciudad Madero");
 saluda("María", 46, "Ciudad De México");
 
-var efectivo = 150;
-var producto = 100;
+var miEfectivoDisponible = 300;
+var precioProducto = 200;
 
+/* if (miEfectivoDisponible >= precioProducto) {
+  console.log("Puedes comprar estre producto");
+} else if (miEfectivoDisponible === 0) {
+  console.log("No tienes efectivo, utiliza una tarjeta");
+} else {
+    console.log("No te alcanza para comprar estre producto");
+} */
 
+if (miEfectivoDisponible <= precioProducto || miEfectivoDisponible === 0) {
+  console.log(
+    "No te alcanza para comprar estre producto o no tienes efectivo. Utiliza una tarjeta"
+  );
+}
 
+switch (miEfectivoDisponible) {
+  case 100:
+    console.log("Tienes 100 pesos");
+    break;
+  case 200:
+    console.log("Tienes 200 pesos");
+    break;
+  case 300:
+    console.log("Tienes 300 pesos");
+    break;
+  default:
+    console.log("No coincide con ningun valor");
+}
+var j = 10;
+for (var i = 50; i <= 100; i++, j++) {
+  console.log("imprimir " + i, "imprimir " + j);
+}
+
+var contador = 10;
+while (contador > 0) {
+  console.log(contador);
+  contador--;
+}
+
+var continuar = "S";
+while (continuar.toLocaleLowerCase() === "s") {
+  const operación = prompt("Selecciona el tipo de operación (-, +, *, /)");
+  const num1 = prompt("Ingresa el primer número.");
+  const num2 = prompt("Ingresa el segundo número.");
+  var resultado;
+  switch (operación) {
+    case "-":
+      resultado = Number(num1) - Number(num2);
+      break;
+    case "+":
+      resultado = Number(num1) + Number(num2);
+      break;
+    case "*":
+      resultado = Number(num1) * Number(num2);
+      break;
+    case "/":
+      if (Number(num2) === 0) {
+        resultado = "No es posible hacer una división entre 0.";
+      }
+      resultado = Number(num1) / Number(num2);
+      break;
+  }
+  console.log("Tu resutaldo es: " + resultado);
+  continuar = prompt("Desea continuar? s/n");
+}
