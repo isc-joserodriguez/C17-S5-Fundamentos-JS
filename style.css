@@ -2,8 +2,6 @@
     background-color: black !important;
 }
 
-
-
 @media(min-width: 425px) {
     * {
         background-color: red !important;
