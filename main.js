@@ -136,11 +136,6 @@ while (continuar.toLocaleLowerCase() === "s") {
 } */
 
 
-
-// Arreglos
-var calificaciones = [100, 80, 0, 50, 100, 90];
-
-
 function numerosPares(numero){
   var cont = 0;
   var numPares = numero;
@@ -152,4 +147,12 @@ function numerosPares(numero){
   }
 }
 
-numerosPares(prompt('Cuantos números quieres tener?'));
+// numerosPares(prompt('Cuantos números quieres tener?'));
+
+// Arreglos
+var calificaciones = [100, '80', [100, 'sfaasdf', {}], 100, 90];
+console.log('Old', calificaciones);
+calificaciones[1] = '100';
+console.log('New', calificaciones[1]);
+console.log('New', calificaciones.at(1));
+
