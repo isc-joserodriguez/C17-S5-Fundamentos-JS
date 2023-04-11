@@ -28,6 +28,6 @@
 
 @media(min-width: 1200px) {
     * {
-        background-color: yellow !important;
+        background-color: black !important;
     }
 }

@@ -78,7 +78,7 @@ var precioProducto = 200;
     console.log("No te alcanza para comprar estre producto");
 } */
 
-if (miEfectivoDisponible <= precioProducto || miEfectivoDisponible === 0) {
+/* if (miEfectivoDisponible <= precioProducto || miEfectivoDisponible === 0) {
   console.log(
     "No te alcanza para comprar estre producto o no tienes efectivo. Utiliza una tarjeta"
   );
@@ -133,4 +133,23 @@ while (continuar.toLocaleLowerCase() === "s") {
   }
   console.log("Tu resutaldo es: " + resultado);
   continuar = prompt("Desea continuar? s/n");
+} */
+
+
+
+// Arreglos
+var calificaciones = [100, 80, 0, 50, 100, 90];
+
+
+function numerosPares(numero){
+  var cont = 0;
+  var numPares = numero;
+  for(var i = 1; cont < numPares; i++){
+    if(i%2===0){
+      console.log(i);
+      cont++;
+    }
+  }
 }
+
+numerosPares(prompt('Cuantos números quieres tener?'));
