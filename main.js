@@ -135,12 +135,11 @@ while (continuar.toLocaleLowerCase() === "s") {
   continuar = prompt("Desea continuar? s/n");
 } */
 
-
-function numerosPares(numero){
+function numerosPares(numero) {
   var cont = 0;
   var numPares = numero;
-  for(var i = 1; cont < numPares; i++){
-    if(i%2===0){
+  for (var i = 1; cont < numPares; i++) {
+    if (i % 2 === 0) {
       console.log(i);
       cont++;
     }
@@ -150,9 +149,75 @@ function numerosPares(numero){
 // numerosPares(prompt('Cuantos números quieres tener?'));
 
 // Arreglos
-var calificaciones = [100, '80', [100, 'sfaasdf', {}], 100, 90];
-console.log('Old', calificaciones);
-calificaciones[1] = '100';
-console.log('New', calificaciones[1]);
-console.log('New', calificaciones.at(1));
+var calificaciones = [100, 50, 80, 40, 90, 100, 80, 10, 0];
 
+/* var suma = 0;
+for (var i = 0; i < calificaciones.length; i++) {
+  suma = calificaciones[i] + suma;
+}
+console.log(suma); */
+/*
+! ForEach
+var suma = 0;
+calificaciones.forEach(function(calificacion, indice){
+  suma = suma + calificacion
+  console.log(calificacion, indice);
+});
+console.log(suma);
+*/
+
+/* 
+! Map
+var nuevoArregloCal = calificaciones.map(function(elementoActual, indice){
+  if(indice === 1 || indice === 2 || indice === 3){
+    return -1;
+  }
+  return elementoActual/10;
+});
+console.log(calificaciones)
+console.log(nuevoArregloCal)
+ */
+
+/* 
+! Filter
+var calificacionesNoAprobatorias = calificaciones.filter(function (
+  elementoActual,
+  indice
+) {
+  // if(elementoActual >= 70){
+  //   return true;
+  // }else{
+  //   return false;
+  // }
+  return elementoActual < 70;
+});
+console.log(calificaciones);
+console.log(calificacionesNoAprobatorias);
+ */
+/* 
+!Find
+var calificacionCero = calificaciones.find(function (elementoActual, indice) {
+  return elementoActual === 0;
+});
+
+console.log(calificaciones);
+console.log(calificacionCero);
+if (!calificacionCero && calificacionCero !== 0) {
+  console.log("No se encontró");
+}else{
+  console.log('La calificación es: ', calificacionCero);
+} */
+
+/* 
+!Reduce
+var sumaCalificaciones = calificaciones.reduce(function (
+  acumulador,
+  elementoActual,
+  indice
+) {
+  return acumulador + elementoActual;
+},
+0);
+
+console.log(sumaCalificaciones);
+ */
